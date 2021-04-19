@@ -12,13 +12,39 @@ namespace ActiveX_ForFifthCourseWork
 {
     public partial class To_do_List: UserControl
     {
-        private int Count = 0;
+        private int Count = 1;
         private int one = 0;
         private int two = 0;
 
         public To_do_List()
         {
             InitializeComponent();
+        }
+
+        public bool DeletedRow() //Удаляет выделенную строку
+        {
+            try
+            {
+                dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeletedRow(int i) //Удаляет строку по индексу
+        {
+            try
+            {
+                dataGridView1.Rows.RemoveAt(i);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public int Row
@@ -75,6 +101,7 @@ namespace ActiveX_ForFifthCourseWork
 
         private void To_do_List_Load(object sender, EventArgs e)
         {
+            dataGridView1.Rows[0].Cells[0].Value = Count;
             //Загрузка элемента управления
             this.dataGridView1.BackgroundColor = Color.Beige;
         }
