@@ -59,6 +59,13 @@ namespace ActiveX_ForFifthCourseWork
                 one = value;
             }
         } //Задать индекс строки
+        public int RowCount
+        {
+            get
+            {
+                return dataGridView1.RowCount;
+            }
+        } //посмотреть количество строк
 
         public int Column
         {
@@ -80,7 +87,7 @@ namespace ActiveX_ForFifthCourseWork
                 if (dataGridView1.Rows[one].Cells[two].Value != null)
                     return dataGridView1.Rows[one].Cells[two].Value.ToString();
                 else
-                    return "";
+                    return "False";
             }
 
             set
@@ -97,6 +104,7 @@ namespace ActiveX_ForFifthCourseWork
             удалитьMenuItem.Enabled = true;
             отложитьMenuItem.Enabled = true;
             отметитьMenuItem.Enabled = true;
+
         }
 
         private void To_do_List_Load(object sender, EventArgs e)
@@ -113,7 +121,7 @@ namespace ActiveX_ForFifthCourseWork
 
         private void отложитьMenuItem_Click(object sender, EventArgs e)
         {
-            int a = dataGridView1.SelectedRows.Count;
+            //int a = dataGridView1.SelectedRows.Count;
             try
             {
                 dataGridView1.SelectedRows[0].Visible = false;

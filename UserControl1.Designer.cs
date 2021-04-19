@@ -65,7 +65,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(830, 351);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             // 
@@ -127,7 +127,7 @@
             this.Column3.HeaderText = "Наименование";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 215;
+            this.Column3.Width = 270;
             // 
             // Column5
             // 
@@ -144,7 +144,7 @@
             "Можно перенести"});
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.Column5.Width = 190;
             // 
             // Column4
             // 
@@ -160,7 +160,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "To_do_List";
-            this.Size = new System.Drawing.Size(731, 357);
+            this.Size = new System.Drawing.Size(836, 357);
             this.Load += new System.EventHandler(this.To_do_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
