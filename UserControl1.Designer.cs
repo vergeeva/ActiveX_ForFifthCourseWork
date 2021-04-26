@@ -33,15 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.удалитьMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отложитьMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отметитьMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.отложитьMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отметитьMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,43 +64,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(830, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(847, 367);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.удалитьMenuItem,
-            this.отложитьMenuItem,
-            this.отметитьMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(219, 70);
-            // 
-            // удалитьMenuItem
-            // 
-            this.удалитьMenuItem.Enabled = false;
-            this.удалитьMenuItem.Name = "удалитьMenuItem";
-            this.удалитьMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.удалитьMenuItem.Text = "Удалить запись";
-            this.удалитьMenuItem.Click += new System.EventHandler(this.удалитьMenuItem_Click);
-            // 
-            // отложитьMenuItem
-            // 
-            this.отложитьMenuItem.Enabled = false;
-            this.отложитьMenuItem.Name = "отложитьMenuItem";
-            this.отложитьMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.отложитьMenuItem.Text = "Отметить как отложенное";
-            this.отложитьMenuItem.Click += new System.EventHandler(this.отложитьMenuItem_Click);
-            // 
-            // отметитьMenuItem
-            // 
-            this.отметитьMenuItem.Enabled = false;
-            this.отметитьMenuItem.Name = "отметитьMenuItem";
-            this.отметитьMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.отметитьMenuItem.Text = "Показать всё";
-            this.отметитьMenuItem.Click += new System.EventHandler(this.отметитьMenuItem_Click);
             // 
             // Column1
             // 
@@ -141,7 +106,8 @@
             "Важно/Срочно",
             "Средняя важность",
             "Незначительно",
-            "Можно перенести"});
+            "Можно перенести",
+            "Без категории"});
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 190;
@@ -153,14 +119,39 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 110;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отложитьMenuItem,
+            this.отметитьMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 52);
+            // 
+            // отложитьMenuItem
+            // 
+            this.отложитьMenuItem.Enabled = false;
+            this.отложитьMenuItem.Name = "отложитьMenuItem";
+            this.отложитьMenuItem.Size = new System.Drawing.Size(259, 24);
+            this.отложитьMenuItem.Text = "Отметить как отложенное";
+            this.отложитьMenuItem.Click += new System.EventHandler(this.отложитьMenuItem_Click);
+            // 
+            // отметитьMenuItem
+            // 
+            this.отметитьMenuItem.Enabled = false;
+            this.отметитьMenuItem.Name = "отметитьMenuItem";
+            this.отметитьMenuItem.Size = new System.Drawing.Size(259, 24);
+            this.отметитьMenuItem.Text = "Показать всё";
+            this.отметитьMenuItem.Click += new System.EventHandler(this.отметитьMenuItem_Click);
+            // 
             // To_do_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "To_do_List";
-            this.Size = new System.Drawing.Size(836, 357);
+            this.Size = new System.Drawing.Size(853, 373);
             this.Load += new System.EventHandler(this.To_do_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -172,7 +163,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem удалитьMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отложитьMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отметитьMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

@@ -34,6 +34,11 @@ namespace ActiveX_ForFifthCourseWork
             }
         }
 
+        public bool Clear()
+        {
+            dataGridView1.Rows.Clear();
+            return true;
+        }
         public bool DeletedRow(int i) //Удаляет строку по индексу
         {
             try
@@ -64,6 +69,10 @@ namespace ActiveX_ForFifthCourseWork
             get
             {
                 return dataGridView1.RowCount;
+            }
+            set
+            {
+                dataGridView1.RowCount = value;
             }
         } //посмотреть количество строк
 
@@ -100,8 +109,14 @@ namespace ActiveX_ForFifthCourseWork
         {
             //Событие, происходящее при добавлении строки
             Count = dataGridView1.RowCount;
-            dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0].Value = Count;
-            удалитьMenuItem.Enabled = true;
+            try
+            {
+                dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0].Value = Convert.ToInt32(dataGridView1.Rows[dataGridView1.RowCount - 2].Cells[0].Value) + 1;
+            }
+            catch
+            {
+                dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0].Value = Count;
+            }
             отложитьMenuItem.Enabled = true;
             отметитьMenuItem.Enabled = true;
 
